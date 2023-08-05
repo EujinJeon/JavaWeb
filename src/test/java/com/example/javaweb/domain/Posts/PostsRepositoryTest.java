@@ -26,7 +26,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void posts_sava_load() {
+    public void posts_save_load() {
         String title = "테스트 게시글";
         String content = "테스트 본문";
         String author = "전유진";
