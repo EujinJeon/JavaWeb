@@ -1,5 +1,6 @@
 package com.example.javaweb.controller;
 
+import com.example.javaweb.controller.dto.PostsResponseDto;
 import com.example.javaweb.controller.dto.PostsSaveRequestDto;
 import com.example.javaweb.controller.dto.PostsUpdateRequestDto;
 import com.example.javaweb.service.posts.PostsService;
@@ -21,5 +22,10 @@ public class PostsApiController {
     public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto)
     {
         return postsService.update(id, requestDto);
+    }
+
+    @GetMapping("/api/v1/posts/{id}")
+    public PostsResponseDto findById (@PathVariable Long id){
+        return postsService.findById(id);
     }
 }
